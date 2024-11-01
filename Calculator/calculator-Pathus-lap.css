@@ -1,0 +1,1195 @@
+*{
+    font-family: 'Martian Mono', monospace;
+}
+.mainBox{
+    /* display: none; */
+    margin-right: auto;
+    margin-left: auto;
+    width: 365px;
+    height: 100vh;
+    border-radius: 40px;
+    background-color: black;
+    outline: 5px solid rgb(116, 116, 116);
+}
+
+#mainCalculator{
+    display: none;
+}
+.topOptions{
+    display: grid;
+    grid-gap: 50px;
+    height: 10px;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 30px;
+    color: #939393;
+    display: none;
+}
+#calculatePage{
+    color: #ec6b21;
+    cursor: pointer;
+}
+#more , #currencyConversion{
+    cursor: pointer;
+}
+.outputArea{
+    width: auto;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.typingArea{
+    height: 370px;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,20%);
+    color: #ec6b21;
+}
+.typingArea > div{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    /* background-color: #898989; */
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+.equal{
+    width: 60%;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color:rgb(236, 107, 33) ;
+}
+#ac{
+    display: flex;
+    /* background-color: gray; */
+}
+.line{
+    width: 310px;
+    opacity: 0.2;
+}
+.size{
+    font-size: 20px;
+}
+#currentOutput{
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    color: white;
+    font-size: 35px;
+    text-align: end;
+    word-wrap:break-word;
+}
+#evalOutput{
+    width: 300px;
+    height: 45px;
+    margin-top: 5px;
+    color: white;
+    font-size: 35px;
+    text-align: end;
+    word-wrap:break-word;
+    margin-right: 20px;
+}
+
+/* created div styling  */
+.currentOutputCreate{
+    /* background-color: rgb(174, 0, 255); */
+    /* border: 2px solid yellow; */
+    width: 250px;
+    height:30px;
+    margin-right: 10px;
+    color: gray;
+    font-size: 20px;
+    text-align: end;
+    word-wrap:break-word;
+}
+.evalOutputCreate{
+    /* background-color: blue; */
+    width: 250px;
+    height: 30px;
+    margin-top: 5px;
+    color: gray;
+    font-size: 20px;
+    text-align: end;
+    word-wrap:break-word;
+    margin-right: 10px;
+}
+
+.outputArea{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+#scroolarea{
+    width: 80%;
+    height: 250px;
+    /* background-color: green; */
+    border: 2px solid rgb(220, 0, 0);
+    overflow-y: scroll;
+    scroll-timeline-name: rev;
+    scroll-timeline-axis:y;
+    direction: reverse;
+    margin-bottom: 15px;
+    padding: 0;
+    /* margin-right:px; */
+    /* text-align: right; */
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    gap: 0;
+    justify-content: end; 
+    align-items: end;
+}
+.empty{
+    width: 50px;
+    height: 50px;
+}
+
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+/* display: none; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+background: red;
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+#conversion{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(5,20%);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-size: 15px;
+    display: none;
+}
+
+#conversion > div{
+    width: 121px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* cursor: pointer; */
+}
+
+#conversion > div > :last-child{
+    cursor: pointer;
+}
+
+
+#ageiconText {
+    position: relative;
+    top: 35px;
+    left: -13px;
+}
+#ageIcon{
+    position: relative;
+    left:15px;
+}
+#areaiconText{
+    position: relative;
+    top: 25px;
+    left: 3px;
+}
+#areaIcon{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+#bmiiconText{
+    position: relative;
+    top: 25px;
+    right: -3px;
+}
+#bmiIcon{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+#dataiconText{
+    position: relative;
+    top:28px;
+    right: px;
+}
+#dataIcon{
+    position: relative;
+    top: 15px;
+    left: 5px;
+}
+#dateiconText{
+    position: relative;
+    top:30px;
+}
+#dateIcon{
+    position: relative;
+    top: 15px;
+    left: 5px;
+}
+#discounticonText{
+    position: relative;
+    top:30px;
+    right: -5px;
+}
+#disIcon{
+    position: relative;
+    top: 15px;
+    left: 30px;
+}
+#leniconText{
+    position: relative;
+    top:25px;
+    left: 5px;
+}
+#lenIcon{
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+#massiconText{
+    position: relative;
+    top:25px;
+    right: -4px;
+}
+#massIcon{
+    position: relative;
+    top: 10px;
+    left: 8px;
+}
+#nsiconText{
+    position: relative;
+    top:25px;
+    right: 10px;
+    font-size: 13px;
+}
+#nsIcon{
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+#speediconText{
+    position: relative;
+    top:30px;
+}
+#speedIcon{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+#tempiconText{
+    position: relative;
+    top:30px;
+    right: px;
+    font-size: 14px;
+}
+#tempIcon{
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+#timeiconText{
+    position: relative;
+    top:30px;
+    right:-5px;
+}
+#timeIcon{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+#voliconText{
+    position: relative;
+    top:30px;
+}
+#volIcon{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+/* BMI Conversions  */
+
+#bmiconvertor{
+    display: grid;
+    display: none;
+}
+#heading{
+    width: 365px;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+}
+#BMIbackArrow{
+    position: relative;
+    left: -120px;
+}
+#BMIdownArrow1,#BMIdownArrow2{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.BMItypingArea{
+    width: 275px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(5,20%);
+    color: #ec6b21;
+}
+.BMItypingArea > div{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+#BMIselector{
+    width: 365px;
+    height: 340px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(3,33%);
+}
+#BMIweight,#BMIheight{
+    display: flex;
+    padding-left: 30px;
+    justify-content:start;
+    align-items: center;
+}
+
+#BMIunit1 ,#BMIunit2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+#unit1value{
+    font-size: 30px;
+    cursor: pointer;
+    color: #ec6b21;
+}
+#unit2value{
+    font-size: 30px;
+    cursor: pointer;
+}
+#unit1,#unit2{
+    font-size: 13px;
+    height: 20px;
+}
+#unit2{
+    font-size: 13px;
+    height: 20px;
+    padding-right: 10px;
+}
+#sideOptios{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 90px;
+    height: 350px;
+}
+
+#sideOptios > div{
+    display: flex;
+    margin: 3px;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 110px;
+    background-color: #2d2d2d;
+    border-radius: 80px;
+    
+}
+#sideOptios > div:hover{
+    cursor: pointer;
+}
+#bMIinput{
+    display: flex;
+}
+
+#weightOption{
+    width: 365px;
+    height: 260px;
+    background-color: #2d2d2d;
+    position: absolute;
+    bottom: -9px;
+    /* top: 120px; */
+    border-radius: 20px 20px 40px 40px;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    display: none;
+}
+#weightOption > div{
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+#weightText,#heightText{
+    cursor: pointer;
+}
+#kilogram{
+    position: relative;
+    right: 80px;
+    cursor: pointer;
+}
+#pounds{
+    position: relative;
+    right: 90px;
+    bottom: 10px;
+    cursor: pointer;
+}
+#cancel{
+    width: 300px;
+    height: 20px;
+    background-color:#555;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.displayWeightCard{
+    display: flex;
+    z-index: 3;
+    position: relative;
+    animation-name: weightBox;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+@keyframes  weightBox{
+    0%{
+        bottom: -20px;
+    }
+    100%{
+       bottom: -9px;
+    }
+}
+
+/* Height Options */
+
+#heightOption{
+    width: 365px;
+    height: 300px;
+    background-color: #2d2d2d;
+    position: absolute;
+    bottom: -9px;
+    border-radius: 20px 20px 40px 40px;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    display: none;
+}
+#heightOption > div{
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+#centimeter{
+    position: relative;
+    right: 80px;
+    cursor: pointer;
+}
+#meter{
+    position: relative;
+    right: 105px;
+    cursor: pointer;
+}
+#feet{
+    position: relative;
+    right: 110px;
+    cursor: pointer;
+}
+#inches{
+    position: relative;
+    right: 100px;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+#cancel{
+    width: 300px;
+    height: 20px;
+    background-color:#555;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.displayHeightCard{
+    display: flex;
+    position: relative;
+    z-index: 3;
+    animation-name: heightBox;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+}
+@keyframes  heightBox{
+    0%{
+        bottom: -30px;
+    }
+    100%{
+       bottom: -9px;
+    }
+}
+.outputCard{
+    position: absolute;
+    top: 260px;
+    margin-left: 13px;
+    width: 340px;
+    height: 280px;
+    background-color:#2d2d2d;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+#BMICardtop{
+    width: 340px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#BMIanswer{
+    width: 150px;
+    height: 90px;
+    font-size: 60px;
+    font-weight: bolder;
+    letter-spacing: -5px;
+    margin-top: 25px;
+    color: #ec6b21;
+    padding-right: 7px;
+}
+#BMIline{
+    width: 270px;
+    height: 3px;
+    background-color:#555;
+    border :1px solid #555;
+    border-radius: 5px;
+}
+#BMIlevel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#BMIdisplay{
+    font-size: 35px;
+    color:#f1f1f1;
+}
+#BMIlevelAns{
+    font-size: 13px;
+    font-weight: bold;
+}
+#BMIinfo{
+    color:#f1f1f1;
+    font-size: 15px;
+}
+#BMIrange{
+    padding-top: 20px;
+    display: flex;
+    font-size: 10px;
+}
+#BMIrange > div{
+    width: 100px;
+}
+#BMIcolor{
+    padding-top: 20px;
+    display: flex;
+    border-radius: 5px;
+}
+#underweight{
+    color: blue;
+}
+#normal{
+    color: green;
+}
+#overweight{
+    color: red;
+}
+#blue{
+    width: 100px;
+    height: 5px;
+    border-radius: 5px 0px 0px 5px;
+    background-color: blue;
+}
+#green{
+    width: 100px;
+    height: 5px;
+    background-color: green;
+}
+#red{
+    width: 100px;
+    height: 5px;
+    background-color: red;
+    border-radius: 0px 5px 5px 0px;
+}
+#BMIvals{
+    padding-top: 20px;
+    display: flex;
+    color: #f1f1f1;
+    justify-content: space-between;
+}
+#BMIvals > div{
+    width: 80px;
+    font-size: 15px;
+}
+#BMIback{
+    width: 365px;
+    height: 50px;
+    display: flex;
+    background-color: #ec6b21;
+    color: #f1f1f1;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -8px;
+    border-radius: 0px 0px 40px 40px;
+    display: none;
+}
+#DisplayBMIback:hover{
+    cursor: pointer;
+}
+#transparent{
+    width: 365px;
+    height: 250px;
+    background-color: transparent;
+    z-index: 5;
+    position: absolute;
+    bottom: 280px;
+    display: none;
+}
+#invalidMsg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    width: 190px;
+    height: 30px;
+    background: #555;
+    color: #f1f1f1;
+    border-radius: 7px;
+    position: absolute;
+    bottom: 90px;
+    margin-left: 80px;
+    display: none;
+}
+
+/* Data Convertor  */  
+
+#dataconvertor{
+    display: grid;
+    display: none;
+}
+#heading{
+    width: 365px;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+}
+#databackArrow{
+    position: relative;
+    left: -120px;
+}
+#DatadownArrow1,#DatadownArrow2{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.DatatypingArea{
+    width: 275px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(5,20%);
+    color: #ec6b21;
+}
+.DatatypingArea > div{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+#dataselector{
+    width: 365px;
+    height: 340px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3,33%);
+}
+
+#dataFrom,#DataTo{
+    display: flex;
+    padding-left: 30px;
+    justify-content:start;
+    align-items: center;
+}
+
+#Dataunit1 ,#Dataunit2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+#Dataunit1value{
+    font-size: 23px;
+    cursor: pointer;
+    color: #ec6b21;
+    padding-bottom: 5px;
+}
+#Dataunit1,#Dataunit2{
+    font-size: 10px;
+}
+#Dataunit2value{
+    font-size: 23px;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+#sideOptios{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 90px;
+    height: 350px;
+}
+
+#sideOptios > div{
+    display: flex;
+    margin: 3px;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 210px;
+    background-color: #2d2d2d;
+    border-radius: 80px;
+    
+}
+#sideOptios > div:hover{
+    cursor: pointer;
+}
+#Datainput{
+    display: flex;
+}
+
+#DataOptionFrom,#DataOptionTo{
+    width: 365px;
+    height: 380px;
+    background-color: #2d2d2d;
+    position: absolute;
+    bottom: -9px;
+    border-radius: 20px 20px 40px 40px;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+#DataOptionFrom > div , #DataOptionTo > div{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    cursor: pointer;
+}
+#dataFromText,#DataToText{
+    cursor: pointer;
+}
+#DataOptionToHead,#DataOptionFromHead{
+    padding-left: 90px;
+}
+#byteTo,#byteFrom{
+    position: relative;
+    right: 27px;
+}
+#cancelFrom,#cancelTo{
+    width: 300px;
+    height: 20px;
+    background-color:#555;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    position: relative;
+    left: 35px;
+}
+.displayDataCard{
+    display: flex;
+    z-index: 3;
+    position: relative;
+    animation-name: weightBox;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+@keyframes  weightBox{
+    0%{
+        bottom: -20px;
+    }
+    100%{
+       bottom: -9px;
+    }
+}
+
+/* Numberal System Conversion */
+
+#NumberalSystemconvertor{
+    display: grid;
+    display: none;
+}
+#NumSysText{
+    font-size: 16px;
+}
+#heading{
+    width: 365px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+}
+#NumSysbackArrow{
+    position: relative;
+    left: -65px;
+}
+#NumsysdownArrow1,#NumsysdownArrow2{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.NumsystypingArea{
+    width: 365px;
+    height: 370px;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,20%);
+    color: #ec6b21;
+}
+.NumsystypingArea > div{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+#Numsysselector{
+    width: 365px;
+    height: 330px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3,33%);
+}
+
+#NumsysFrom,#NumsysTo{
+    display: flex;
+    padding-left: 30px;
+    justify-content:start;
+    align-items: center;
+}
+
+#Numsysunit1 ,#Numsysunit2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
+    margin-top: 45px;
+    margin-right: 35px;
+}
+#Numsysunit1value{
+    font-size: 23px;
+    cursor: pointer;
+    color: #ec6b21;
+    padding-bottom: 5px;
+}
+#Numsysunit2value{
+    font-size: 23px;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+#NumsysOptionFrom,#NumsysOptionTo{
+    width: 365px;
+    height: 330px;
+    background-color: #2d2d2d;
+    position: absolute;
+    bottom: -9px;
+    border-radius: 20px 20px 40px 40px;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+#NumsysOptionFrom > div , #NumsysOptionTo > div{
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    cursor: pointer;
+    margin-left: 40px;
+}
+#NumsysFromText,#NumsysToText{
+    cursor: pointer;
+}
+#NumsysOptionToHead,#NumsysOptionFromHead{
+    margin-top: 10px;
+    padding-left: 40px;
+    font-size: 13px;
+}
+
+#NumsyscancelFrom,#NumsyscancelTo{
+    width: 300px;
+    height: 20px;
+    background-color:#555;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    position: relative;
+    right: 25px;
+}
+#NumsysCancelFromText,#NumsysCancelToText{
+    position: relative;
+    left: 90px;
+}
+.displayNumsysCard{
+    display: flex;
+    z-index: 3;
+    position: relative;
+    animation-name: weightBox;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+@keyframes  weightBox{
+    0%{
+        bottom: -20px;
+    }
+    100%{
+       bottom: -9px;
+    }
+}
+
+#NumsysF,#NumsysA,#NumsysB,#NumsysC,#NumsysD,#NumsysE,#Numsys1,#Numsys2,#Numsys3,
+#Numsys4,#Numsys5,#Numsys6,#Numsys7,#Numsys8,#Numsys9,#Numsys10,#Numsys0{
+    color: white;
+}
+#NumSysbackArrow :hover{
+    cursor: pointer;
+}
+
+
+/* Temperatur conversion */
+
+#Tempconvertor{
+    display: grid;
+    /* display: none; */
+}
+#heading{
+    width: 365px;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+}
+#TempbackArrow{
+    position: relative;
+    left: -120px;
+}
+#TempdownArrow1,#TempdownArrow2{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.TemptypingArea{
+    width: 365px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,20%);
+    color: #ec6b21;
+}
+.TemptypingArea > div{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+#Tempselector{
+    width: 365px;
+    height: 340px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3,33%);
+}
+
+#TempFrom,#TempTo{
+    display: flex;
+    padding-left: 30px;
+    justify-content:start;
+    align-items: center;
+}
+
+#Tempunit1 ,#Tempunit2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+#Tempunit1value{
+    font-size: 23px;
+    cursor: pointer;
+    color: #ec6b21;
+    padding-bottom: 5px;
+}
+#Tempunit1,#Tempunit2{
+    font-size: 10px;
+}
+#Tempunit2value{
+    font-size: 23px;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+#sideOptios{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 90px;
+    height: 350px;
+}
+
+#sideOptios > div{
+    display: flex;
+    margin: 3px;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 210px;
+    background-color: #2d2d2d;
+    border-radius: 80px;
+    
+}
+#Tempinput{
+    display: flex;
+}
+#TempOptionFrom , #TempOptionTo{
+    width: 365px;
+    height: 380px;
+    background-color: #2d2d2d;
+    position: absolute;
+    bottom: -9px;
+    border-radius: 20px 20px 40px 40px;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+#TempOptionFrom > div , #TempOptionTo > div{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items:center ;
+    cursor: pointer;
+    padding-left: 45px;
+    /* outline: 2px solid white; */
+}
+#TempFromText,#TempToText{
+    cursor: pointer;
+}
+#TempOptionToHead,#TempOptionFromHead{
+    position: relative;
+    left: 75px;
+}
+
+#TempdegreeFrom,#TempdegreeTo,#TempbackArrow,#BMIbackArrow,#databackArrow{
+    cursor: pointer;
+}
+#tempcancelFrom,#tempcancelTo{
+    position: relative;
+    width: 300px;
+    height: 20px;
+    background-color:#555;
+    display: grid;
+    place-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    left: 35px;
+}
+
+.cancelInTemp{
+    position: relative;
+    left: 60px;
+}
+
+.displayTempCard{
+    display: flex;
+    z-index: 3;
+    position: relative;
+    animation-name: weightBox;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+@keyframes  weightBox{
+    0%{
+        bottom: -20px;
+    }
+    100%{
+       bottom: -9px;
+    }
+}

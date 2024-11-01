@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcultor</title>
+    <script src="https://kit.fontawesome.com/ab7676f36e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="calculator.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calculator.css">
+
+</head>
+<body>
+    <div class="mainBox">
+        
+            <div class="topOptions" id="topOptions">
+                <div id="minimize">
+                    <i class="fa-solid fa-down-left-and-up-right-to-center fa-xl size"></i>
+                </div>
+                <div id="calculatePage">
+                    <i class="fa-solid fa-equals fa-xl size"></i>
+                </div>
+                <div id="more">
+                    <i class="fa-solid fa-border-all fa-xl size"></i>
+                </div>
+                <div id="currencyConversion">
+                    <i class="fa-solid fa-dollar-sign fa-xl size"></i>
+                </div>
+                <div id="history">
+                    <i class="fa-solid fa-clock-rotate-left fa-xl size"></i>
+                </div>
+                    
+            </div>
+
+        <div id="mainCalculator">
+            <div class="outputArea">
+                <div id="scroolarea">
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                </div>
+                <div id="currentOutput">
+                
+                </div>
+                <div id="evalOutput">
+                    0
+                </div>
+            </div>
+
+
+            <hr class="line">
+
+
+            <div class="typingArea">
+                    <div id="acContainer" >
+                        <span id="ac">
+                            <i class="fa-solid fa-a fa-xl" style="color: rgb(236, 107, 33);"></i>
+                            <i class="fa-solid fa-c fa-xl" style="color: rgb(236, 107, 33);"></i>
+                        </span>    
+                    </div>
+                    <div class="delete" id="delete">
+                        <i class="fa-solid fa-delete-left fa-xl" style="color: rgb(236, 107, 33)"></i>
+                    </div>
+                    <div id="percentage" class="percentage">
+                        <i class="fa-solid fa-percent fa-xl" style="color: rgb(236, 107, 33)"></i>
+                    </div>
+                    <div id="divide">     
+                        <i class="fa-solid fa-divide fa-xl" style="color: rgb(236, 107, 33)"></i>
+                    </div>
+                    <div id="7">
+                        <i class="fa-solid fa-7 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                    </div>
+                    <div id="8">
+                        <i class="fa-solid fa-8 fa-2xl" style="color:rgb(252, 252, 252)"></i>
+                    </div>
+                    <div id="9">
+                        <i class="fa-solid fa-9 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                    </div>  
+                    <div id="multiple" class="multiple">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                    <div id="4">
+                        <i class="fa-solid fa-4 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                    </div>
+
+
+                    <div id="5">
+                        <i class="fa-solid fa-5 fa-2xl" style="color: rgb(255, 254, 254)"></i>
+                    </div>
+
+
+                    <div id="6">
+                        <i class="fa-solid fa-6 fa-2xl" style="color: rgb(247, 247, 247)"></i>
+                    </div> 
+
+
+                    <div id="subtract" class="subtract">
+                        <span class="material-symbols-outlined">remove</span> 
+                    </div>
+
+
+                    <div id="1">
+                        <i class="fa-solid fa-1 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                    </div>
+
+
+                    <div id="2">
+                        <i class="fa-solid fa-2 fa-2xl" style="color: rgb(248, 248, 248)"></i>
+                    </div>
+
+
+                    <div id="3">
+                        <i class="fa-solid fa-3 fa-2xl" style="color: rgb(231, 231, 231)"></i>
+                    </div> 
+
+                    <div id="add" class="add">
+                        <span class="material-symbols-outlined">add</span>
+                    </div>
+                    <div id="rotate" class="rotate">
+                        <span class="material-symbols-outlined">rotate_90_degrees_ccw</span>
+                    </div>
+                    
+                    <div id="0">
+                        <i class="fa-solid fa-0 fa-2xl" style="color: rgb(235, 235, 235)"></i>
+                    </div>
+
+
+                    <div id="decimal" class="decimal">
+                        <span class="material-symbols-outlined" style="color: white;">wifi_1_bar</span>
+                    </div>
+
+                    
+                    <div id="equal" class="equal">
+                        <i class="fa-solid fa-equals fa-xl" style="color: #fcfcfc;" ></i>
+                    </div>
+                    
+            </div>
+        </div>
+    
+
+
+     <!-- Conversions  -->
+
+        <div id="conversion">
+            <div id="age">
+                <div>
+                    <i class="fa-solid fa-cake-candles fa-2xl" style="color: #939393;" id="ageIcon"></i>
+                </div>
+                <div style="color: #939393;" id="ageiconText">Age</div>
+            </div>
+            
+            <div id="area">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-layer-group fa-2xl" style="color: #939393;" id="areaIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="areaiconText">Area</div>
+                </div>
+            </div>
+            <div id="bmi">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-child-reaching fa-2xl" style="color: #939393;" id="bmiIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="bmiiconText">BMI</div>
+                </div>
+            </div>
+            <div id="data">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-database fa-2xl" style="color: #939393;" id="dataIcon"></i>
+
+                    </div>
+                    <div style="color: #939393;" id="dataiconText">Data</div>
+                </div>
+            </div>
+            <div id="date">
+                <div>
+                    <div>
+                        <i class="fa-regular fa-calendar-days fa-2xl" style="color: #939393;" id="dateIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="dateiconText">Date</div>
+                </div>
+            </div>
+            <div id="discount">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-tag fa-2xl" style="color: #939393;" id="disIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="discounticonText">Discount</div>
+                </div>
+            </div>
+            <div id="length">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-ruler-horizontal fa-2xl" style="color: #939393;" id="lenIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="leniconText">Length</div>
+                </div>
+            </div>
+            <div id="mass">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-weight-hanging fa-2xl" style="color: #939393;" id="massIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="massiconText">Mass</div>
+                </div>
+            </div>
+            <div id="numeralSystem">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-arrow-up-9-1 fa-2xl" style="color: #939393;" id="nsIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="nsiconText">Number System</div>
+                </div>
+            </div>
+            <div id="speed">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-gauge fa-2xl" style="color: #939393;" id="speedIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="speediconText">Speed</div>
+                </div>
+            </div>
+            <div id="temperature">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-temperature-full fa-2xl" style="color: #939393;" id="tempIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="tempiconText">Temperature</div>
+                </div>
+            </div>
+            <div id="time">
+                <div>
+                    <div>
+                        <i class="fa-regular fa-clock fa-2xl" style="color: #939393;" id="timeIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="timeiconText">Time</div>
+                </div>
+            </div>
+            <div id="volume">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-cube fa-2xl" style="color: #939393;" id="volIcon"></i>
+                    </div>
+                    <div style="color: #939393;" id="voliconText">Volume</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BMI conversion -->
+
+        <div id="bmiconvertor">
+            
+            <div id="heading">
+                <div id="BMIbackArrow"><i class="fa-solid fa-arrow-left fa-2l" style="color: white;"></i></div>
+                <div id="bmiText">BMI</div>
+            </div>
+        
+
+         <div id="BMIselector">
+            <div id="BMIweight">
+                <span id="weightText">Weight</span> <i class="fa-solid fa-caret-down fa-l" id="BMIdownArrow1"></i>
+            </div>
+            <div>
+
+            </div>
+            <div id="BMIunit1">
+                <div id="unit1value">
+                    60
+                </div>
+                <div id="unit1">
+                    kilogram 
+                </div> 
+            </div>
+            <div id="BMIheight">
+                <span id="heightText">Height</span> <i class="fa-solid fa-caret-down fa-l" id="BMIdownArrow2"></i>
+            </div>
+            <div>
+                
+            </div>
+            <div id="BMIunit2">
+                <div id="unit2value">
+                    170
+                </div>
+                <div id="unit2">
+                    centimeter
+                </div> 
+            </div>
+            <div id="BMIempty"></div>
+            <div id="BMIempty"></div>
+         </div>
+
+         <hr class="line">
+        <div id="bMIinput">
+            <div class="BMItypingArea">
+            
+                <div id="BMI7">
+                    <i class="fa-solid fa-7 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+                <div id="BMI8">
+                    <i class="fa-solid fa-8 fa-2xl" style="color:rgb(252, 252, 252)"></i>
+                </div>
+                <div id="BMI9">
+                    <i class="fa-solid fa-9 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>  
+
+                <div id="BMI4">
+                    <i class="fa-solid fa-4 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+
+                <div id="BMI5">
+                    <i class="fa-solid fa-5 fa-2xl" style="color: rgb(255, 254, 254)"></i>
+                </div>
+
+
+                <div id="BMI6">
+                    <i class="fa-solid fa-6 fa-2xl" style="color: rgb(247, 247, 247)"></i>
+                </div> 
+
+                <div id="BMI1">
+                    <i class="fa-solid fa-1 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+
+                <div id="BMI2">
+                    <i class="fa-solid fa-2 fa-2xl" style="color: rgb(248, 248, 248)"></i>
+                </div>
+
+
+                <div id="BMI3">
+                    <i class="fa-solid fa-3 fa-2xl" style="color: rgb(231, 231, 231)"></i>
+                </div> 
+
+                <div id="rotate" class="rotate">
+                    
+                </div>
+
+
+                <div id="BMI0">
+                    <i class="fa-solid fa-0 fa-2xl" style="color: rgb(235, 235, 235)"></i>
+                </div>
+
+
+                <div id="BMI10" class="decimal">
+                    <span class="material-symbols-outlined" style="color: white;">wifi_1_bar</span>
+                </div>
+            </div>
+
+
+              <div id="sideOptios">
+            
+                    <div id="BMIacContainer" >
+                        <span id="ac">
+                            <i class="fa-solid fa-a fa-xl" style="color: rgb(236, 107, 33);"></i>
+                            <i class="fa-solid fa-c fa-xl" style="color: rgb(236, 107, 33);"></i>
+                        </span>    
+                    </div>
+            
+                    <div class="delete" id="BMIdelete">
+                        <i class="fa-solid fa-delete-left fa-xl" style="color: rgb(236, 107, 33)"></i>
+                    </div>
+            
+                    <div id="BMIGo" >
+                        <span id="ac">
+                            <i class="fa-solid fa-g fa-xl" style="color: rgb(236, 107, 33);"></i>
+                            <i class="fa-solid fa-o fa-xl" style="color: rgb(236, 107, 33);"></i>
+                        </span>   
+                    </div>
+            </div>
+
+            <div id="weightOption">
+                <div id="weightOptionHead">Weight</div>
+                <div id="kilogram">Kilogram</div>
+                <div id="pounds">Pounds</div>
+                <div id="cancel">Cancel</div>
+            </div>
+
+            <div id="heightOption">
+                <div id="heightOptionHead">Height</div>
+                <div id="centimeter">Centimeter</div>
+                <div id="meter">Meter</div>
+                <div id="feet">Feet</div>
+                <div id="inches">Inches</div>
+                <div id="cancel">Cancel</div>
+            </div>
+
+           </div>
+
+           <div id="outputCard" class="outputCard">
+                <div id="BMICardtop">
+                    <div id="BMIanswer">
+                        24.8
+                    </div>
+                    <div id="BMIlevel">
+                        <div id="BMIdisplay">BMI</div>
+                        <div id="BMIlevelAns">Underweight</div>
+                    </div>
+                </div>
+                <hr id="BMIline">
+                <div id="BMIinfo">Information</div>
+                <div id="BMIrange">
+                    <div id="underweight">&nbsp;Underweight</div>
+                    <div id="normal">&nbsp;&nbsp;&nbsp;&nbsp;Normal</div>
+                    <div id="overweight">&nbsp;&nbsp;Overweight</div>
+                </div>
+                <div id="BMIcolor">
+                    <div id="blue"></div>
+                    <div id="green"></div>
+                    <div id="red"></div>
+                </div>
+                <div id="BMIvals">
+                    <div id="val1">16.0</div>
+                    <div id="val2">&nbsp;18.5</div>
+                    <div id="val3"> &nbsp;&nbsp;25.0</div>
+                    <div id="val4"> &nbsp;&nbsp;&nbsp;40.0</div>
+                </div>
+                
+           </div>
+
+           <div id="BMIback"><span id="DisplayBMIback">Back</span></div>
+           
+           <div id="transparent">
+                
+           </div>
+           
+           <div id="invalidMsg">Enter valid Parameters</div>
+        </div>
+
+        <!-- Data Convertor -->
+
+        <div id="dataconvertor">
+            
+            <div id="heading">
+                <div id="databackArrow"><i class="fa-solid fa-arrow-left fa-2l" style="color: white;"></i></div>
+                <div id="bmiText">Data</div>
+            </div>
+        
+
+         <div id="dataselector">
+            <div id="dataFrom">
+                <span id="dataFromText">B</span> <i class="fa-solid fa-caret-down fa-l" id="DatadownArrow1"></i>
+            </div>
+            <div id="Dataunit1">
+                <div id="Dataunit1value">
+                    1
+                </div>
+                <div id="unit1Data">
+                    Byte 
+                </div> 
+            </div>
+            <div id="DataTo">
+                <span id="DataToText">MB</span> <i class="fa-solid fa-caret-down fa-l" id="DatadownArrow2"></i>
+            </div>
+            <div id="Dataunit2">
+                <div id="Dataunit2value">
+                    9.53674316e-7
+                </div>
+                <div id="unit2Data">
+                    Megabyte
+                </div> 
+            </div>
+         </div>
+
+         <hr class="line">
+        <div id="Datainput">
+            <div class="DatatypingArea">
+            
+                <div id="Data7">
+                    <i class="fa-solid fa-7 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+                <div id="Data8">
+                    <i class="fa-solid fa-8 fa-2xl" style="color:rgb(252, 252, 252)"></i>
+                </div>
+                <div id="Data9">
+                    <i class="fa-solid fa-9 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>  
+
+                <div id="Data4">
+                    <i class="fa-solid fa-4 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+
+                <div id="Data5">
+                    <i class="fa-solid fa-5 fa-2xl" style="color: rgb(255, 254, 254)"></i>
+                </div>
+
+
+                <div id="Data6">
+                    <i class="fa-solid fa-6 fa-2xl" style="color: rgb(247, 247, 247)"></i>
+                </div> 
+
+                <div id="Data1">
+                    <i class="fa-solid fa-1 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+
+                <div id="Data2">
+                    <i class="fa-solid fa-2 fa-2xl" style="color: rgb(248, 248, 248)"></i>
+                </div>
+
+
+                <div id="Data3">
+                    <i class="fa-solid fa-3 fa-2xl" style="color: rgb(231, 231, 231)"></i>
+                </div> 
+
+                <div id="rotate" class="rotate">
+                    
+                </div>
+
+
+                <div id="Data0">
+                    <i class="fa-solid fa-0 fa-2xl" style="color: rgb(235, 235, 235)"></i>
+                </div>
+
+
+                <div id="Data10" class="decimal">
+                    <span class="material-symbols-outlined" style="color: white;">wifi_1_bar</span>
+                </div>
+            </div>
+
+
+              <div id="sideOptios">
+            
+                    <div id="DataAcContainer" >
+                        <span id="ac">
+                            <i class="fa-solid fa-a fa-xl" style="color: rgb(236, 107, 33);"></i>
+                            <i class="fa-solid fa-c fa-xl" style="color: rgb(236, 107, 33);"></i>
+                        </span>    
+                    </div>
+            
+                    <div class="delete" id="Datadelete">
+                        <i class="fa-solid fa-delete-left fa-xl" style="color: rgb(236, 107, 33)"></i>
+                    </div>
+
+            </div>
+
+            <div id="DataOptionFrom">
+                <div id="DataOptionFromHead">Select unit</div>
+                <div id="byteFrom">Byte B</div>
+                <div id="kilobyteFrom">Kilobyte KB</div>
+                <div id="megabyteFrom">Megabyte MB</div>
+                <div id="gigabyteFrom">Gigabyte GB</div>
+                <div id="terabyteFrom">Terabyte TB</div>
+                <div id="petaByteFrom">PetaByte PB</div>
+                <div id="cancelFrom">Cancel</div>
+            </div>
+
+            <div id="DataOptionTo">
+                <div id="DataOptionToHead">Select unit2</div>
+                <div id="byteTo">Byte B</div>
+                <div id="kilobyteTo">Kilobyte KB</div>
+                <div id="megabyteTo">Megabyte MB</div>
+                <div id="gigabyteTo">Gigabyte GB</div>
+                <div id="terabyteTo">Terabyte TB</div>
+                <div id="petaByteTo">PetaByte PB</div>
+                <div id="cancelTo">Cancel</div>
+            </div>
+
+           </div>
+
+        </div>
+
+        <!-- Numberal System -->
+
+        <div id="NumberalSystemconvertor">
+            
+            <div id="heading">
+                <div id="NumSysbackArrow"><i class="fa-solid fa-arrow-left fa-2l" style="color: white;"></i></div>
+                <div id="NumSysText">Number System</div>
+            </div>
+        
+
+         <div id="Numsysselector">
+            <div id="NumsysFrom">
+                <span id="NumsysFromText">HEX</span> <i class="fa-solid fa-caret-down fa-l" id="NumsysdownArrow1"></i>
+            </div>
+            <div id="Numsysunit1">
+                <div id="Numsysunit1value">
+                    0
+                </div>
+            </div>
+            <div id="NumsysTo">
+                <span id="NumsysToText">HEX</span> <i class="fa-solid fa-caret-down fa-l" id="NumsysdownArrow2"></i>
+            </div>
+            <div id="Numsysunit2">
+                <div id="Numsysunit2value">
+                    0
+                </div>
+            </div>
+         </div>
+
+         <hr class="line">
+        <div id="Numsysinput">
+            <div class="NumsystypingArea">
+            
+                <div id="NumsysAcContainer" >
+                    <span id="ac">
+                        <i class="fa-solid fa-a fa-xl" style="color: rgb(236, 107, 33);"></i>
+                        <i class="fa-solid fa-c fa-xl" style="color: rgb(236, 107, 33);"></i>
+                    </span>    
+                </div>
+
+                <div class="delete" id="Numsysdelete">
+                    <i class="fa-solid fa-delete-left fa-xl" style="color: rgb(236, 107, 33)"></i>
+                </div>
+
+                <div id="NumsysF">
+                    <i class="fa-solid fa-f fa-xl" ></i>
+                </div>
+
+                <div id="NumsysE">
+                    <i class="fa-solid fa-e fa-xl" ></i>
+                </div>
+
+
+                <div id="Numsys7">
+                    <i class="fa-solid fa-7 fa-2xl"></i>
+                </div>
+                <div id="Numsys8">
+                    <i class="fa-solid fa-8 fa-2xl"></i>
+                </div>
+                <div id="Numsys9">
+                    <i class="fa-solid fa-9 fa-2xl"></i>
+                </div>  
+
+                <div id="NumsysD">
+                    <i class="fa-solid fa-d fa-xl" ></i>
+                </div>
+
+                <div id="Numsys4">
+                    <i class="fa-solid fa-4 fa-2xl"></i>
+                </div>
+
+
+                <div id="Numsys5">
+                    <i class="fa-solid fa-5 fa-2xl"></i>
+                </div>
+
+
+                <div id="Numsys6">
+                    <i class="fa-solid fa-6 fa-2xl"></i>
+                </div> 
+
+                <div id="NumsysC">
+                    <i class="fa-solid fa-c fa-xl" ></i>
+                </div>
+
+                <div id="Numsys1">
+                    <i class="fa-solid fa-1 fa-2xl"></i>
+                </div>
+
+
+                <div id="Numsys2">
+                    <i class="fa-solid fa-2 fa-2xl" ></i>
+                </div>
+
+
+                <div id="Numsys3">
+                    <i class="fa-solid fa-3 fa-2xl"></i>
+                </div> 
+
+                <div id="NumsysB">
+                    <i class="fa-solid fa-b fa-xl" ></i>
+                </div>
+
+                <div id="empty">
+                    
+                </div>
+
+                <div id="Numsys0">
+                    <i class="fa-solid fa-0 fa-2xl"></i>
+                </div>
+
+
+                <div id="Numsys10" class="decimal">
+                    <span class="material-symbols-outlined">wifi_1_bar</span>
+                </div>
+
+                <div id="NumsysA">
+                    <i class="fa-solid fa-a fa-xl" ></i>
+                </div>
+
+            </div>
+
+            <div id="NumsysOptionFrom">
+                <div id="NumsysOptionFromHead">Select numberal system</div>
+                <div id="binFrom">Binary BIN</div>
+                <div id="octFrom">Octal OCT</div>
+                <div id="decFrom">Decimal DEC</div>
+                <div id="hexFrom">Hexadecimal HEX</div>
+                <div id="NumsyscancelFrom"><span id="NumsysCancelFromText">Cancel</span></div>
+            </div>
+
+            <div id="NumsysOptionTo">
+                <div id="NumsysOptionToHead">Select numberal system</div>
+                <div id="binTo">Binary BIN</div>
+                <div id="octTo">Octal OCT</div>
+                <div id="decTo">Decimal DEC</div>
+                <div id="hexTo">Hexadecimal HEX</div>
+                <div id="NumsyscancelTo"><span id="NumsysCancelToText">Cancel</span></div>
+            </div>
+
+           </div>
+
+        </div>
+
+        <!-- Temperature Conversion -->
+
+        <div id="Tempconvertor">
+            
+            <div id="heading">
+                <div id="TempbackArrow"><i class="fa-solid fa-arrow-left fa-2l" style="color: white;"></i></div>
+                <div id="bmiText">Temp</div>
+            </div>
+        
+
+         <div id="Tempselector">
+            <div id="TempFrom">
+                <p><sup id="TempdegreeFrom">o</sup></p><span id="TempFromText">C</span> <i class="fa-solid fa-caret-down fa-l" id="TempdownArrow1"></i>
+            </div>
+            <div id="Tempunit1">
+                <div id="Tempunit1value">
+                    1
+                </div>
+                <div id="unit1Temp">
+                    Celcius 
+                </div> 
+            </div>
+            <div id="TempTo">
+                <p><sup id="TempdegreeTo">o</sup></p><span id="TempToText">F</span><i class="fa-solid fa-caret-down fa-l" id="TempdownArrow2"></i>
+            </div>
+            <div id="Tempunit2">
+                <div id="Tempunit2value">
+                    33.8
+                </div>
+                <div id="unit2Temp">
+                    Fahrenheit
+                </div> 
+            </div>
+         </div>
+
+         <hr class="line">
+        <div id="Tempinput">
+            <div class="TemptypingArea">
+            
+                <div id="Temp7">
+                    <i class="fa-solid fa-7 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+                <div id="Temp8">
+                    <i class="fa-solid fa-8 fa-2xl" style="color:rgb(252, 252, 252)"></i>
+                </div>
+                <div id="Temp9">
+                    <i class="fa-solid fa-9 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>  
+                <div id="TempAc">
+                    <span id="ac">
+                        <i class="fa-solid fa-a fa-xl" style="color: rgb(236, 107, 33);"></i>
+                        <i class="fa-solid fa-c fa-xl" style="color: rgb(236, 107, 33);"></i>
+                    </span> 
+                </div>
+                <div id="Temp4">
+                    <i class="fa-solid fa-4 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+                <div id="Temp5">
+                    <i class="fa-solid fa-5 fa-2xl" style="color: rgb(255, 254, 254)"></i>
+                </div>
+
+
+                <div id="Temp6">
+                    <i class="fa-solid fa-6 fa-2xl" style="color: rgb(247, 247, 247)"></i>
+                </div> 
+
+                <div class="delete" id="Tempdelete">
+                    <i class="fa-solid fa-delete-left fa-xl" style="color: rgb(236, 107, 33)"></i>
+                </div>
+
+                <div id="Temp1">
+                    <i class="fa-solid fa-1 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+
+                <div id="Temp2">
+                    <i class="fa-solid fa-2 fa-2xl" style="color: rgb(248, 248, 248)"></i>
+                </div>
+
+
+                <div id="Temp3">
+                    <i class="fa-solid fa-3 fa-2xl" style="color: rgb(231, 231, 231)"></i>
+                </div> 
+
+                <div id="TempPlusOrMinus">
+                    <i class="fa-solid fa-plus-minus fa-2xl"></i>
+                </div>
+
+                <div id="rotate" class="rotate">
+                    
+                </div>
+
+
+                <div id="Temp0">
+                    <i class="fa-solid fa-0 fa-2xl" style="color: rgb(235, 235, 235)"></i>
+                </div>
+
+
+                <div id="Temp10" class="decimal">
+                    <span class="material-symbols-outlined" style="color: white;">wifi_1_bar</span>
+                </div>
+            </div>
+
+            <div id="TempOptionFrom">
+                <div id="TempOptionFromHead">Select unit</div>
+                <div id="CelsiusFrom">Celsius<span><sup>&nbsp;o</sup></span>C </div>
+                <div id="FahrenheitFrom">Fahrenheit<span><sup>&nbsp;o</sup></span>F</div>
+                <div id="KelvinFrom">Kelvin K</div>
+                <div id="RankineFrom">Rankine<span><sup>&nbsp;o</sup></span>R</div>
+                <div id="ReaumurFrom">Reaumur<span><sup> &nbsp;o</sup></span>Re</div>
+                <div id="tempcancelFrom"><p class="cancelInTemp">Cancel</p></div>
+            </div>
+
+            <div id="TempOptionTo">
+                <div id="TempOptionToHead">Select unit</div>
+                <div id="CelsiusTo">Celsius<span><sup>&nbsp;o</sup></span>C </div>
+                <div id="FahrenheitTo">Fahrenheit<span><sup>&nbsp;o</sup></span>F</div>
+                <div id="KelvinTo">Kelvin K</div>
+                <div id="RankineTo">Rankine<span><sup>&nbsp;o</sup></span>R</div>
+                <div id="ReaumurTo">Reaumur<span><sup> &nbsp;o</sup></span>Re</div>
+                <div id="tempcancelTo"><p class="cancelInTemp">Cancel</p></div>
+            </div>
+            
+           </div>
+
+        </div>
+
+        <!-- discount Conversion -->
+
+        <div id="discountConvertor">
+
+            <div id="discountheading">
+                <div id="discountbackArrow"><i class="fa-solid fa-arrow-left fa-2l" style="color: white;"></i></div>
+                <div id="bmiText">discount</div>
+            </div>
+        
+
+         <div id="discountselector">
+            
+                <div id="discountTextAtLeft">
+                    <div id="discountText1">
+                        Original Price
+                    </div>
+                    <div id="discountText2">
+                        Discount(%off)
+                    </div>
+                    <div id="discountText3">
+                        Final price
+                    </div>
+                </div>
+
+                <div id="discountTextAtRight">
+
+                    <div id="discountOriganlPriceValue">
+                        100
+                    </div>
+                    <div id="discountPercencentage">
+                        10
+                    </div>
+                    <div id="discountFinalPrice">
+                        90
+                    </div>
+
+                </div>
+                
+            <div id="discountSave">
+                You save <span id="discountsaveval">10</span>
+            </div>
+
+         </div>
+
+        <hr class="line">
+        <div id="discountinput">
+            <div class="discounttypingArea">
+            
+                <div id="discount7">
+                    <i class="fa-solid fa-7 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+                <div id="discount8">
+                    <i class="fa-solid fa-8 fa-2xl" style="color:rgb(252, 252, 252)"></i>
+                </div>
+                <div id="discount9">
+                    <i class="fa-solid fa-9 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>  
+
+                <div id="discount4">
+                    <i class="fa-solid fa-4 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+                <div id="discount5">
+                    <i class="fa-solid fa-5 fa-2xl" style="color: rgb(255, 254, 254)"></i>
+                </div>
+
+                <div id="discount6">
+                    <i class="fa-solid fa-6 fa-2xl" style="color: rgb(247, 247, 247)"></i>
+                </div> 
+
+                <div id="discount1">
+                    <i class="fa-solid fa-1 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+                <div id="discount2">
+                    <i class="fa-solid fa-2 fa-2xl" style="color: rgb(248, 248, 248)"></i>
+                </div>
+
+                <div id="discount3">
+                    <i class="fa-solid fa-3 fa-2xl" style="color: rgb(231, 231, 231)"></i>
+                </div> 
+
+                <div id="rotate" class="rotate">
+                    
+                </div>
+
+                <div id="discount0">
+                    <i class="fa-solid fa-0 fa-2xl" style="color: rgb(235, 235, 235)"></i>
+                </div>
+
+                <div id="discount10" class="decimal">
+                    <span class="material-symbols-outlined" style="color: white;">wifi_1_bar</span>
+                </div>
+            </div>
+
+            <div id="sideOptios">
+            
+                <div id="discountAcContainer" >
+                    <span id="ac">
+                        <i class="fa-solid fa-a fa-xl" style="color: rgb(236, 107, 33);"></i>
+                        <i class="fa-solid fa-c fa-xl" style="color: rgb(236, 107, 33);"></i>
+                    </span>    
+                </div>
+            
+                <div class="delete" id="discountdelete">
+                    <i class="fa-solid fa-delete-left fa-xl" style="color: rgb(236, 107, 33)"></i>
+                </div>
+
+            </div>
+            
+        </div>
+
+        </div>
+
+        <!-- Time Conversions -->
+
+        <div id="TimeConvertor">
+
+            <div id="heading">
+                <div id="TimebackArrow"><i class="fa-solid fa-arrow-left fa-2l" style="color: white;"></i></div>
+                <div id="timeText">Time</div>
+            </div>
+        
+
+         <div id="Timeselector">
+            <div id="TimeFrom">
+                <span id="TimeFromText">y</span> <i class="fa-solid fa-caret-down fa-l" id="TimedownArrow1"></i>
+            </div>
+            <div id="Timeunit1">
+                <div id="Timeunit1value">
+                    1
+                </div>
+                <div id="unit1Time">
+                    Year 
+                </div> 
+            </div>
+            <div id="TimeTo">
+                <span id="TimeToText">s</span> <i class="fa-solid fa-caret-down fa-l" id="TimedownArrow2"></i>
+            </div>
+            <div id="Timeunit2">
+                <div id="Timeunit2value">
+                    31536000
+                </div>
+                <div id="unit2Time">
+                    Second
+                </div> 
+            </div>
+         </div>
+
+         <hr class="line">
+        <div id="Timeinput">
+            <div class="TimetypingArea">
+            
+                <div id="Time7">
+                    <i class="fa-solid fa-7 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+                <div id="Time8">
+                    <i class="fa-solid fa-8 fa-2xl" style="color:rgb(252, 252, 252)"></i>
+                </div>
+                <div id="Time9">
+                    <i class="fa-solid fa-9 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>  
+
+                <div id="Time4">
+                    <i class="fa-solid fa-4 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+
+                <div id="Time5">
+                    <i class="fa-solid fa-5 fa-2xl" style="color: rgb(255, 254, 254)"></i>
+                </div>
+
+
+                <div id="Time6">
+                    <i class="fa-solid fa-6 fa-2xl" style="color: rgb(247, 247, 247)"></i>
+                </div> 
+
+                <div id="Time1">
+                    <i class="fa-solid fa-1 fa-2xl" style="color: rgb(255, 255, 255)"></i>
+                </div>
+
+
+                <div id="Time2">
+                    <i class="fa-solid fa-2 fa-2xl" style="color: rgb(248, 248, 248)"></i>
+                </div>
+
+
+                <div id="Time3">
+                    <i class="fa-solid fa-3 fa-2xl" style="color: rgb(231, 231, 231)"></i>
+                </div> 
+
+                <div id="rotate" class="rotate">
+                    
+                </div>
+
+
+                <div id="Time0">
+                    <i class="fa-solid fa-0 fa-2xl" style="color: rgb(235, 235, 235)"></i>
+                </div>
+
+
+                <div id="Time10" class="decimal">
+                    <span class="material-symbols-outlined" style="color: white;">wifi_1_bar</span>
+                </div>
+            </div>
+
+
+              <div id="sideOptios">
+            
+                    <div id="TimeAcContainer" >
+                        <span id="ac">
+                            <i class="fa-solid fa-a fa-xl" style="color: rgb(236, 107, 33);"></i>
+                            <i class="fa-solid fa-c fa-xl" style="color: rgb(236, 107, 33);"></i>
+                        </span>    
+                    </div>
+            
+                    <div class="delete" id="Timedelete">
+                        <i class="fa-solid fa-delete-left fa-xl" style="color: rgb(236, 107, 33)"></i>
+                    </div>
+
+            </div>
+
+            <div id="TimeOptionFrom">
+                <div id="TimeOptionFromHead"><span id="TimeOptionTitle">Select unit</span></div>
+                <div id="TimeyearFrom">Year y</div>
+                <div id="TimeweekFrom">Week wk</div>
+                <div id="TimedayFrom">Day d</div>
+                <div id="TimehourFrom">Hour h</div>
+                <div id="TimeminuteFrom">Minute min</div>
+                <div id="TimesecondFrom">Second s</div>
+                <div id="TimemillisecondFrom">Millisecond ms</div>
+                <div id="TimemicrosecondFrom">Microsecond &#181;s</div>
+                <div id="TimepicosecondFrom">Picosecond ps</div>
+                <div id="TimecancelFrom"><span id="TimeCancel">Cancel</span></div>
+            </div>
+
+            <div id="TimeOptionTo">
+                <div id="TimeOptionToHead"><span id="TimeOptionTitle">Select unit</span></div>
+                <div id="TimeyearTo">Year y</div>
+                <div id="TimeweekTo">Week wk</div>
+                <div id="TimedayTo">Day d</div>
+                <div id="TimehourTo">Hour h</div>
+                <div id="TimeminuteTo">Minute min</div>
+                <div id="TimesecondTo">Second s</div>
+                <div id="TimemillisecondTo">Millisecond ms</div>
+                <div id="TimemicrosecondTo">Microsecond &#181;s</div>
+                <div id="TimepicosecondTo">Picosecond ps</div>
+                <div id="TimecancelTo"><span id="TimeCancel">Cancel</span></div>
+            </div>
+
+           </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+ 
+
+    
+</body>
+</html>
